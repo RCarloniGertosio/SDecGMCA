@@ -2,6 +2,8 @@
 
 SDecGMCA (Spherical Deconvolution Generalized Morphological Component Analysis) is an algorithm aiming at solving joint Deconvolution and Blind Source Separation (DBSS) problems with spherical data.
 
+The 2D adaptation of the algorithm can be found [here](https://github.com/RCarloniGertosio/2DecGMCA).
+
 ## Contents
 1. [Introduction](#intro)
 1. [Procedure](#procedure)
@@ -9,6 +11,7 @@ SDecGMCA (Spherical Deconvolution Generalized Morphological Component Analysis) 
 1. [Parameters](#param)
 1. [Example](#example)
 1. [Authors](#authors)
+1. [Reference](#ref)
 1. [License](#license)
 
 <a name="intro"></a>
@@ -87,7 +90,7 @@ Below is the list of the main attributes of the SDecGMCA class.
 | `k`       | float                           | parameter of the k-std thresholding                                                        | 3                        |
 | `K_max`   | float                           | maximal L0 norm of the sources. Being a percentage, it should be between 0 and 1           | 0.5                      |
 | `thrEnd`  | bool                            | perform thresholding during the finale estimation of the sources                           | True                     |
-| `eps`     | (3,) float numpy.ndarray        | stopping criteria of (1) the warm-up, (2) the refinement and (3) the finale refinement ofS | [1e-2, 1e-4, 1e-4]       |
+| `eps`     | (3,) float numpy.ndarray        | stopping criteria of (1) the warm-up, (2) the refinement and (3) the finale refinement of S | [1e-2, 1e-4, 1e-4]       |
 | `verb`    | int                             | verbosity level, from 0 (mute) to 5 (most talkative)                                       | 0                        |
 
 Below is the list of the other attributes of the SDecGMCA class, which can reasonably be equal to their default values.
@@ -120,6 +123,11 @@ A = sdecgmca.A.copy()  # estimated mixing matrix
 
 * Rémi Carloni Gertosio
 * Jérôme Bobin
+
+<a name="ref"></a>
+## Reference
+
+R. Carloni Gertosio, J. Bobin, [*Joint deconvolution and unsupervised source separation for data on the sphere*](https://doi.org/10.1016/j.dsp.2020.102946)
 
 <a name="license"></a>
 ## License
